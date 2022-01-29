@@ -5,24 +5,22 @@ body {
 
 /*Make the <h1> elements blue*/
 h1 {
-    color: blue;
+    color: #0000ff;
 }
 
 /*Make all <li> elements in the shade of hexadecimal blue*/
 li {
-    color: blue;
+    color: #0000ff;
 }
 
 /*Paragraph background to orange*/
 p {
-    background-color: orange;
+    background-color: #ffa500;
 }
 
 /*Make all <h3> have 5px red solid border*/
 h3 {
-    font-size: 5px;
-    color: red;
-    border-style: solid;
+    border: #ff0000 5px solid;
 }
 
 /*Give everything with <abbr> bold and underlined*/
@@ -33,32 +31,32 @@ abbr {
 
 /*Give elements with class "explanation" red*/
 .explanation {
-    color: red;
+    color: #ff0000;
 }
 
 /*Give <p> in id "zen-benefits" pink background*/
 #zen-benefits p {
-    background-color: pink;
+    background-color: #ffc0cb;
 }
 
 /*Make <li> adjacent to <h2> red background*/
-h2 + li {
-    background-color: red;
+h2 + ul {
+    background-color: #ff0000;
 }
 
 /*Give <em> inside <p> red and bold*/
 p em {
-    color: red;
+    color: #ff0000;
     font-weight: bold;
 }
 
 /* Give visited link green */
 a{
-    color: blue;
+    color: #0000ff;
 }
 
 :visited{
-    color: green;
+    color: #008000;
 }
 
 /* Change to body font to any google font as you like */
