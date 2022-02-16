@@ -1,14 +1,21 @@
 h1 {
     text-align: center;
 }
-
 table {
-    margin: 0 auto;
+    margin: auto;
     border-collapse: collapse;
     border-style: hidden;
+    font-family: Papyrus;
+    font-size: 25px;
 }
 
 table td {
-    padding: 4rem;
-    border: 1px solid black;
+    border:  1px solid #000000;
+	height:  7rem;
+	width:  7rem;
+	text-align:  center;
+	vertical-align:  middle;
+	font-family:  "Comic Sans MS", cursive, sans-serif;
+	font-size:  50px;
+	cursor: pointer;
 }
