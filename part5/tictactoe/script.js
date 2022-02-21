@@ -24,7 +24,7 @@ for(var i =0; i < cells.length; i++){
 
 function turnClick(square){
 	turn(square.target.id, p1);
-	if(!checkTie()){
+	if(!checkWin(origBoard, p1) && !checkTie()){
 		turn(emptyCell(), p2);
 	}
 }
