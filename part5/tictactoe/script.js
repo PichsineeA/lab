@@ -5,14 +5,14 @@ var gameWon = false;
 
 
 let winner = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9],
-    [1, 5, 9],
-    [3, 5, 7],
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
     [1, 4, 7],
     [2, 5, 8],
-    [3, 6, 9],
+	[0, 4, 8],
+    [6, 4, 2],
 ]
 
 
@@ -32,7 +32,9 @@ function turnClick(square){
 
 function turn(squareId, player) {
     origBoard[squareId] = player;
-    document.getElementById(squareId).innerText = player
+    document.getElementById(squareId).innerText = player;
+	let gameWon = checkWin(origBoard, player)
+	if(gameWon) gameOver(gameWon)
 }
 
 function emptyCell() {
@@ -59,5 +61,25 @@ function checkTie(){
   	}
 	if(emptyArr2 == 0){
 		document.querySelector("h2").innerHTML = "Tie";
+	}
+}
+
+function checkWin(board, player) {
+	let plays = board.reduce((a, e, i) =>
+		(e === player) ? a.concat(i) : a, []);
+	let gameWon = null;
+	for (let [index, win] of winner.entries()) {
+		if (win.every(elem => plays.indexOf(elem) > -1)) {
+			gameWon = {index: index, player: player};
+			break;
+		}
+	}
+	return gameWon;
+}
+
+function gameOver(gameWon) {
+	for (let index of winner[gameWon.index]) {
+		document.querySelector("h2").innerHTML=
+			gameWon.player == p1 ? "You win!" : "You lose";
 	}
 }
